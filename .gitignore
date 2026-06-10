@@ -1,0 +1,16 @@
+# .gitignore for the pocket-db examples repository.
+# This folder is a separate git repository — the main pocket-db repository
+# ignores it entirely (see ../.gitignore).
+
+# Dependencies and build output
+node_modules/
+dist/
+out/
+
+# Database files produced by running the examples
+*.pdb
+*.pdb.lock
+
+# Editor / OS noise
+.DS_Store
+*.log

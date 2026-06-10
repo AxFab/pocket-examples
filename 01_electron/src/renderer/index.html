@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <title>My Notes — pocket-db example</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 2rem; max-width: 720px; }
+      form { display: grid; gap: 0.5rem; margin-bottom: 1.5rem; }
+      input, textarea { padding: 0.5rem; font: inherit; }
+      ul { list-style: none; padding: 0; }
+      li { border: 1px solid #ddd; border-radius: 6px; padding: 0.75rem; margin-bottom: 0.5rem; }
+      li h3 { margin: 0 0 0.25rem; }
+      li small { color: #777; }
+      button { cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <h1>My Notes</h1>
+
+    <form id="create-form">
+      <input id="title" placeholder="Title" required />
+      <textarea id="body" placeholder="Note body" rows="3"></textarea>
+      <button type="submit">Add note</button>
+    </form>
+
+    <input id="search" placeholder="Search notes…" />
+    <ul id="notes-list"></ul>
+
+    <script type="module" src="./renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "my-notes",
+  "version": "1.0.0",
+  "description": "Example Electron note-taking app backed by pocket-db (companion project for the blog article).",
+  "type": "module",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/copy-renderer.mjs",
+    "start": "npm run build && electron .",
+    "test": "npm run build && node --test \"dist/tests/**/*.test.js\""
+  },
+  "dependencies": {
+    "@axfab/pocket-db": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "electron": "^31.0.0",
+    "typescript": "^5.4.0"
+  }
+}
