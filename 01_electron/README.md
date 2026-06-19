@@ -26,4 +26,4 @@ npm test         # build + run the db-logic tests (no Electron needed)
 
 ## Read the article on Dev.to
 
-[https://dev.to/axfab/build-an-electron-app-with-local-data-storage-no-sqlite-bindings-no-server-45b3]
+https://dev.to/axfab/build-an-electron-app-with-local-data-storage-no-sqlite-bindings-no-server-45b3

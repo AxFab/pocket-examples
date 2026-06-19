@@ -13,7 +13,7 @@
  *    temporary directory; the Electron entry point calls it with
  *    `app.getPath('userData')`.
  */
-import { open, type Database, type Collection } from "@axfab/pocket-db";
+import { pocketDb, type Database, type Collection } from "@axfab/pocket-db";
 import { mkdirSync } from "node:fs";
 import path from "node:path";
 
@@ -33,7 +33,7 @@ export function initDatabase(dataDir: string): NotesDatabase {
   // userData may not exist on first launch — open() does not mkdir for us.
   mkdirSync(dataDir, { recursive: true });
 
-  const db = open({ path: path.join(dataDir, "notes.pdb") });
+  const db = pocketDb(path.join(dataDir, "notes.pdb"));
   const notes = db.collection("notes");
 
   // Index for search — the query planner picks it up automatically.
