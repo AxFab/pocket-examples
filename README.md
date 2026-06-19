@@ -13,6 +13,8 @@ its own `package.json`, build, and tests.
 | Example | Description |
 |---------|-------------|
 | [`01_electron`](./01_electron) | Note-taking Electron app. The main process owns the database, the renderer talks to it over IPC (`contextBridge` + `ipcMain.handle`). Covers indexing, search, compaction, and startup migrations. Companion project for the article *"Build an Electron app with local data storage — no SQLite bindings, no server"* (see `01_electron/ARTICLE.md`). |
+| [`02_cli`](./02_cli) | `ledger` — a command-line expense tracker. Covers indexed queries (string/number), update operators (`$inc`, `$set`), regex residual search, `compact()`, and `stats()`. |
+| [`03_api`](./03_api) | Multi-user bookmarks API with JWT auth, built on `expediate`'s `apiBuilder`. Covers per-owner indexed multi-tenancy, `$set` updates, in-memory tag/text filtering, sort/skip/limit, and OpenAPI generation via `describe()`. |
 
 ## Running an example
 

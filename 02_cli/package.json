@@ -1,0 +1,21 @@
+{
+  "name": "ledger",
+  "version": "1.0.0",
+  "description": "Example CLI expense tracker backed by pocket-db.",
+  "type": "module",
+  "bin": {
+    "ledger": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node scripts/make-executable.mjs",
+    "start": "npm run build && node dist/cli.js",
+    "test": "npm run build && node --test \"dist/tests/**/*.test.js\""
+  },
+  "dependencies": {
+    "@axfab/pocket-db": "^0.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "typescript": "^5.4.0"
+  }
+}
