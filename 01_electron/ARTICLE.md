@@ -61,14 +61,14 @@ One thing to know: Electron creates the `userData` directory lazily, so on a fir
 ```ts
 // src/main/db.ts
 import { app } from 'electron'
-import { open } from '@axfab/pocket-db'
+import { pocketDb } from '@axfab/pocket-db'
 import { mkdirSync } from 'node:fs'
 import path from 'node:path'
 
 const dataDir = app.getPath('userData')
 mkdirSync(dataDir, { recursive: true }) // may not exist on first launch
 
-export const db = open({ path: path.join(dataDir, 'notes.pdb') })
+export const db = pocketDb({ path: path.join(dataDir, 'notes.pdb') })
 export const notes = db.collection('notes')
 ```
 
